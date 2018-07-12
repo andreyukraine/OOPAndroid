@@ -8,7 +8,7 @@ import com.example.bx.shop.personals.Cashier;
 
 import java.util.ArrayList;
 
-public class Check implements ICheck {
+public abstract class Check implements ICheck {
     Integer number;
     ArrayList<IProduct> products;
     ICashMashine cashMashine;

@@ -6,7 +6,7 @@ import com.example.bx.shop.inteface.IProduct;
 
 import java.util.ArrayList;
 
-public class Category implements ICategory{
+public abstract class Category implements ICategory{
 
     String name;
     private ArrayList<IProduct> products;

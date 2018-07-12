@@ -5,7 +5,7 @@ import com.example.bx.shop.inteface.IProduct;
 
 import java.util.ArrayList;
 
-public class CashMashine implements ICashMashine{
+public abstract class CashMashine implements ICashMashine{
 
     String series_number;
     Integer count_check;

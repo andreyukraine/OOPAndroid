@@ -1,6 +1,7 @@
 package com.example.bx.shop.object;
 
 import com.example.bx.shop.category.Electornic;
+import com.example.bx.shop.equipment.Datex;
 import com.example.bx.shop.personals.Cashier;
 import com.example.bx.shop.personals.Director;
 import com.example.bx.shop.personals.Seller;
@@ -25,6 +26,6 @@ public class Shop {
         products.add(phone);
         electornic.setProducts(products);
         electornic.setPersonals(sales);
-        CashMashine cashMashine = new CashMashine("111222333", 0);
+        CashMashine cashMashine = new Datex("111222333", 0);
     }
 }

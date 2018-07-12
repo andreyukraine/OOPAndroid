@@ -3,7 +3,7 @@ package com.example.bx.shop.object;
 import com.example.bx.shop.inteface.ICategory;
 import com.example.bx.shop.inteface.IProduct;
 
-public class Product implements IProduct{
+public abstract class Product implements IProduct{
 
     String name;
     ICategory category;

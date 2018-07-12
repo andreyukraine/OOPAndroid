@@ -2,7 +2,7 @@ package com.example.bx.shop.object;
 
 import com.example.bx.shop.inteface.IClient;
 
-public class Client implements IClient{
+public abstract class Client implements IClient{
 
     String name;
     Integer phone;
