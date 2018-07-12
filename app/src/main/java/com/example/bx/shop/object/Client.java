@@ -1,6 +1,8 @@
 package com.example.bx.shop.object;
 
-public class Client {
+import com.example.bx.shop.inteface.IClient;
+
+public class Client implements IClient{
 
     String name;
     Integer phone;

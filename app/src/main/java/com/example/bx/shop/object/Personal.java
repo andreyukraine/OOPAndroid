@@ -1,16 +1,20 @@
 package com.example.bx.shop.object;
 
-public class Personal {
+import com.example.bx.shop.inteface.ICategory;
+import com.example.bx.shop.inteface.IPersonal;
+
+public class Personal implements IPersonal{
 
     String name;
     String function;
-    String department;
+    ICategory category;
     Double salary;
 
-    public Personal(String name, String function, Double salary) {
+    public Personal(String name, String function, Double salary, ICategory category) {
         this.name = name;
         this.function = function;
         this.salary = salary;
+        this.category = category;
     }
 
     public String getName() {
@@ -29,12 +33,12 @@ public class Personal {
         this.function = function;
     }
 
-    public String getDepartment() {
-        return department;
+    public ICategory getCategory() {
+        return category;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setCategory(ICategory category) {
+        this.category = category;
     }
 
     public Double getSalary() {

@@ -1,7 +1,8 @@
 package com.example.bx.shop.clients;
+import com.example.bx.shop.inteface.IClient;
 import com.example.bx.shop.object.Client;
 
-public class VipClient extends Client {
+public class VipClient extends Client{
 
     String status = "vip";
 

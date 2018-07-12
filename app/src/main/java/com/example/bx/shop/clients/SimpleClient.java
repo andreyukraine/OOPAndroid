@@ -1,8 +1,9 @@
 package com.example.bx.shop.clients;
 
+import com.example.bx.shop.inteface.IClient;
 import com.example.bx.shop.object.Client;
 
-public class SimpleClient extends Client {
+public class SimpleClient extends Client{
 
     String status = "simple";
 

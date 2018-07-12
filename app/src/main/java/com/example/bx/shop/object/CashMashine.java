@@ -1,9 +1,23 @@
 package com.example.bx.shop.object;
 
-public class CashMashine {
+import com.example.bx.shop.inteface.ICashMashine;
+import com.example.bx.shop.inteface.IProduct;
+
+import java.util.ArrayList;
+
+public class CashMashine implements ICashMashine{
 
     String series_number;
     Integer count_check;
+    ArrayList<IProduct> products;
+
+    public ArrayList<IProduct> getProducts() {
+        return products;
+    }
+
+    public void setProducts(ArrayList<IProduct> products) {
+        this.products = products;
+    }
 
     public CashMashine(String series_number, Integer count_check) {
         this.series_number = series_number;

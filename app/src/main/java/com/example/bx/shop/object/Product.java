@@ -1,12 +1,15 @@
 package com.example.bx.shop.object;
 
-public class Product {
+import com.example.bx.shop.inteface.ICategory;
+import com.example.bx.shop.inteface.IProduct;
+
+public class Product implements IProduct{
 
     String name;
-    String category;
+    ICategory category;
     Float price;
 
-    public Product(String name, String category, Float price) {
+    public Product(String name, ICategory category, Float price) {
         this.name = name;
         this.category = category;
         this.price = price;
@@ -20,11 +23,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getCategory() {
+    public ICategory getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(ICategory category) {
         this.category = category;
     }
 
