@@ -1,20 +1,28 @@
 package com.example.bx.shop.object;
 
+import com.example.bx.shop.inteface.ICashMashine;
+import com.example.bx.shop.inteface.ICashier;
 import com.example.bx.shop.inteface.ICategory;
 import com.example.bx.shop.inteface.IPersonal;
 
 public abstract class Personal implements IPersonal{
 
-    String name;
-    String function;
-    ICategory category;
-    Double salary;
+    private String name;
+    private String function;
+    private ICategory category;
+    private Double salary;
 
     public Personal(String name, String function, Double salary, ICategory category) {
         this.name = name;
         this.function = function;
         this.salary = salary;
         this.category = category;
+    }
+
+    public Personal(String name, String function, Double salary) {
+        this.name = name;
+        this.function = function;
+        this.salary = salary;
     }
 
     public String getName() {
