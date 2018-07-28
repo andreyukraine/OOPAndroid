@@ -4,10 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.bx.shop.dbconnect.SQLite;
-import com.example.core.dbase.DBConnect;
-import com.example.core.enums.ConnectionDB;
-
-import java.io.IOException;
+import com.example.core.Start;
+import com.example.core.object.Shop;
 
 public class Main extends AppCompatActivity {
 
@@ -19,7 +17,8 @@ public class Main extends AppCompatActivity {
             public void run(){
 
                     SQLite.initConnection(getApplicationContext());
-
+                    Shop shop = new Shop();
+                    shop.init();
             }
         }.start();
 

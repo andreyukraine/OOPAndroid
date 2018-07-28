@@ -1,29 +1,22 @@
 package com.example.bx.shop.dbconnect;
 
-import android.annotation.TargetApi;
+
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 
 import com.example.core.dbase.DBConnect;
-import com.example.core.enums.ConnectionDB;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import static android.content.ContentValues.TAG;
-
 public class SQLite extends DBConnect {
 
-    private static final String DB_NAME = "shop.db";
+    private static final String DB_NAME = "sd.db";
 
     private static final String DRIVER_CLASS = "org.sqldroid.SQLDroidDriver";
-
     private static String dbFolder;
     private static String dbPath;
 
@@ -38,5 +31,38 @@ public class SQLite extends DBConnect {
 
         dbPath = dbFolder + DB_NAME;
 
+        if (!checkDataBaseExists()) {
+            copyDataBase(context);
+            System.out.println("Coppy base");
+        }
     }
+
+
+    private static void copyDataBase(Context context){
+        try {
+            InputStream myInput = context.getAssets().open("database/" + DB_NAME);
+
+            OutputStream myOutput = new FileOutputStream(dbPath);
+
+            File databaseFolder = new File(dbFolder);
+            databaseFolder.mkdir();
+
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = myInput.read(buffer)) > 0) {
+                myOutput.write(buffer, 0, length);
+            }
+
+
+
+        } catch (Exception e) {
+            Log.e("СopyDatabase", e.getMessage());
+        }
+    }
+
+    private static boolean checkDataBaseExists() {
+        File dbFile = new File(dbPath);
+        return dbFile.exists();
+    }
+
 }
