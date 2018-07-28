@@ -2,9 +2,7 @@ package com.example.bx.shop;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.example.bx.shop.dbconnect.SQLite;
-import com.example.core.Start;
 import com.example.core.object.Shop;
 
 public class Main extends AppCompatActivity {
